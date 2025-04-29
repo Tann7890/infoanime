@@ -83,7 +83,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     padding: 30px;
-    border-radius: 8px; /* Agar lebih rapi dan melengkung */
+    border-radius: 8px; 
 }
   .anime-list h2{
     font-weight: bolder;
@@ -97,22 +97,22 @@ body {
   }
   
 .modal-content {
-    background-color: #343a40;; /* Ganti dengan warna yang kamu inginkan */
-    color: white; /* Agar teks di dalam modal tetap terbaca */
+    background-color: #343a40;; 
+    color: white;
 }
 
 .card {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  min-height: 250px; /* boleh pakai min-height */
-  background-color: #00000022; /* Ganti dengan warna yang kamu inginkan */
+  min-height: 250px;
+  background-color: #00000022; 
   padding: 15px;
-  border-radius: 8px; /* Agar lebih rapi dan melengkung */
+  border-radius: 8px; 
 }
   
   .card-img-left {
-    width: 40%; /* Lebar gambar */
+    width: 40%; 
     object-fit: cover;
   }
   
@@ -182,5 +182,4 @@ body {
 footer {
   margin-bottom: auto;
 }
-
 
