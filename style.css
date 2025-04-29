@@ -1,19 +1,24 @@
+/* Mengatur font seluruh halaman menggunakan Sawarabi Gothic */
 body {
   font-family: 'Sawarabi Gothic', sans-serif;
 }
 
+/* Styling dasar untuk link navigasi */
 .nav-link {
   color: white;
 }
 
-  .nav-link:hover {
-    background-color: #333;
-  }
+/* Saat hover, link berubah warna background */
+.nav-link:hover {
+  background-color: #333;
+}
 
-  .nav-pills .nav-link.active {
-    background-color: #c88d5c;
-  }
+/* Link yang aktif dalam nav-pills punya warna background khusus */
+.nav-pills .nav-link.active {
+  background-color: #c88d5c;
+}
 
+/* Mengatur sidebar: posisi tetap di kiri, tinggi 100%, dan padding atas */
 #sidebar {
   width: 250px;
   position: fixed;
@@ -23,47 +28,50 @@ body {
   padding-top: 20px;
 }
 
+/* Konten utama bergeser ke kanan sejauh lebar sidebar */
 #content {
   margin-left: 250px;
   width: calc(100% - 250px);
 }
 
+/* Responsif untuk layar kecil (misalnya mobile) */
 @media (max-width: 768px) {
   #sidebar {
     position: relative;
-    width: 100%;
+    width: 100%; /* Sidebar jadi memenuhi lebar layar */
   }
   #content {
-    margin-left: 0 !important;
+    margin-left: 0 !important; /* Konten tidak bergeser */
   }
 }
 
-/* Tombol utama di index.html */
+/* Tombol utama dengan warna khusus dan efek saat hover */
 .btn-primary {
   background-color: #c88d5c;
   border-color: #bf792a;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  border-radius:10px ;
+  border-radius: 10px;
 }
 
+/* Efek saat tombol utama di-hover */
 .btn-primary:hover {
   background-color: #4f2f15;
   border-color: #251305;
-  transform: scale(1.05);
+  transform: scale(1.05); /* Membesar sedikit saat hover */
 }
 
-
+/* Tombol gelap standar Bootstrap dengan modifikasi */
 .btn-dark {
-    background-color: #343a40;
-    color: #fff;
-    border: none;
-  }
-  
-.btn-dark:hover {
-    background-color: #333;
-  }
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+}
 
-/* homepage */
+.btn-dark:hover {
+  background-color: #333;
+}
+
+/* Bagian homepage dengan background animasi (gif) */
 .home {
   background: url('images/bg.gif');
   background-repeat: no-repeat;
@@ -71,104 +79,112 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+/* Teks di homepage punya efek bayangan agar lebih terbaca di background */
 .home h1, .home p {
-    text-shadow: 5px 5px 5px rgba(0,0,0,0.7);
-  }
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+}
 
-/* list anime */
-
+/* Section daftar anime dengan background khusus */
 .anime-list {
-    background-image: url('images/bg1.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 30px;
-    border-radius: 8px; 
+  background-image: url('images/bg1.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+  border-radius: 8px;
 }
-  .anime-list h2{
-    font-weight: bolder;
-  }
 
-  
+.anime-list h2 {
+  font-weight: bolder;
+}
+
+/* Styling untuk gambar dalam modal */
 .modal-body img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-  }
-  
-.modal-content {
-    background-color: #343a40;; 
-    color: white;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
 }
 
+/* Warna latar modal dan teks */
+.modal-content {
+  background-color: #343a40;
+  color: white;
+}
+
+/* Card untuk tampilan anime */
 .card {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   min-height: 250px;
-  background-color: #00000022; 
+  background-color: #00000022;
   padding: 15px;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
-  
-  .card-img-left {
-    width: 40%; 
-    object-fit: cover;
-  }
-  
-  .card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  .card-body h5 {
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .card-body p {
-    flex-grow: 1;
-    font-size: small;
-  }
 
-  .list-group-item {
-    background-color: #1f1c1c;
-    color: #c88d5c;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .collapse img {
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
+.card-img-left {
+  width: 40%;
+  object-fit: cover;
+}
 
-  .popover {
-    background-color: #c88d5c !important;
-    color: white;
-    border-color: #a06b42;
-  }
-  
-  .popover-header {
-    background-color: #6c472b;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .popover-body {
-    color: white;
-  }
-  
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
 
-/* about */
-#about{
+.card-body h5 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-body p {
+  flex-grow: 1;
+  font-size: small;
+}
+
+/* Styling item list anime */
+.list-group-item {
+  background-color: #1f1c1c;
+  color: #c88d5c;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Styling gambar di dalam elemen collapse */
+.collapse img {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Popover styling (tooltips besar) */
+.popover {
+  background-color: #c88d5c !important;
+  color: white;
+  border-color: #a06b42;
+}
+
+.popover-header {
+  background-color: #6c472b;
+  color: white;
+  font-weight: bold;
+}
+
+.popover-body {
+  color: white;
+}
+
+/* Section About */
+#about {
   background: url('images/bg2.gif');
   background-repeat: no-repeat;
-  height: 100vh; 
+  height: 100vh;
   background-size: cover;
 }
 
+/* Styling container teks di section About */
 .text-background {
   background-color: #343a40;
   text-align: center;
@@ -177,9 +193,7 @@ body {
   color: white;
 }
 
-
-/* Footer */
+/* Footer tetap di bagian bawah */
 footer {
   margin-bottom: auto;
 }
-
