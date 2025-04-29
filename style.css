@@ -1,0 +1,186 @@
+body {
+  font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+.nav-link {
+  color: white;
+}
+
+  .nav-link:hover {
+    background-color: #333;
+  }
+
+  .nav-pills .nav-link.active {
+    background-color: #c88d5c;
+  }
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+#content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    position: relative;
+    width: 100%;
+  }
+  #content {
+    margin-left: 0 !important;
+  }
+}
+
+/* Tombol utama di index.html */
+.btn-primary {
+  background-color: #c88d5c;
+  border-color: #bf792a;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius:10px ;
+}
+
+.btn-primary:hover {
+  background-color: #4f2f15;
+  border-color: #251305;
+  transform: scale(1.05);
+}
+
+
+.btn-dark {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+  }
+  
+.btn-dark:hover {
+    background-color: #333;
+  }
+
+/* homepage */
+.home {
+  background: url('images/bg.gif');
+  background-repeat: no-repeat;
+  height: 100vh; 
+  background-size: cover;
+  background-position: center;
+}
+.home h1, .home p {
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  }
+
+/* list anime */
+
+.anime-list {
+    background-image: url('images/bg1.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+    border-radius: 8px; /* Agar lebih rapi dan melengkung */
+}
+  .anime-list h2{
+    font-weight: bolder;
+  }
+
+  
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+.modal-content {
+    background-color: #343a40;; /* Ganti dengan warna yang kamu inginkan */
+    color: white; /* Agar teks di dalam modal tetap terbaca */
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 250px; /* boleh pakai min-height */
+  background-color: #00000022; /* Ganti dengan warna yang kamu inginkan */
+  padding: 15px;
+  border-radius: 8px; /* Agar lebih rapi dan melengkung */
+}
+  
+  .card-img-left {
+    width: 40%; /* Lebar gambar */
+    object-fit: cover;
+  }
+  
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .card-body h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .card-body p {
+    flex-grow: 1;
+    font-size: small;
+  }
+
+  .list-group-item {
+    background-color: #1f1c1c;
+    color: #c88d5c;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .collapse img {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .popover {
+    background-color: #c88d5c !important;
+    color: white;
+    border-color: #a06b42;
+  }
+  
+  .popover-header {
+    background-color: #6c472b;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .popover-body {
+    color: white;
+  }
+  
+
+/* about */
+#about{
+  background: url('images/bg2.gif');
+  background-repeat: no-repeat;
+  height: 100vh; 
+  background-size: cover;
+}
+
+.text-background {
+  background-color: #343a40;
+  text-align: center;
+  width: 100%;
+  padding: 20px 20px;
+  color: white;
+}
+
+
+/* Footer */
+footer {
+  margin-bottom: auto;
+}
+
+
