@@ -1,44 +1,52 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id"> <!-- Menentukan bahasa halaman web sebagai Bahasa Indonesia -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>List Anime - InfoAnime</title>
+  <meta charset="UTF-8"> <!-- Menentukan karakter encoding sebagai UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Membuat tampilan responsif pada perangkat mobile -->
+  <title>Home - InfoAnime</title> <!-- Judul halaman yang ditampilkan di tab browser -->
+
+  <!-- Import CSS Bootstrap dari CDN untuk styling cepat dan responsif -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Import font Poppins dari Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Link ke file CSS lokal untuk styling kustom -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="d-flex">
+<body class="d-flex"> <!-- Mengatur tubuh halaman menjadi elemen fleksibel -->
 
 <!-- Sidebar -->
-<nav id="sidebar" class="d-flex flex-column p-3 bg-dark text-white">
-  <a href="#" class="mb-3 text-white text-decoration-none">
-    <span class="fs-4">InfoAnime</span>
+<nav id="sidebar" class="d-flex flex-column p-3 bg-dark text-white"> <!-- Sidebar dengan kelas Bootstrap untuk tampilan vertikal dengan warna latar gelap -->
+  <a href="#" class="mb-3 text-white text-decoration-none"> <!-- Link yang menuju ke halaman utama, tanpa garis bawah -->
+    <span class="fs-4">InfoAnime</span> <!-- Nama website dengan ukuran font 4 -->
   </a>
-  <hr>
-  <ul class="nav nav-pills flex-column">
-    <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
-    <li><a href="anime-list.html" class="nav-link text-white active">Anime List</a></li>
-    <li><a href="about.html" class="nav-link text-white">About</a></li>
+  <hr> <!-- Garis pemisah -->
+  <ul class="nav nav-pills flex-column"> <!-- Daftar navigasi dengan gaya pill dan orientasi vertikal -->
+    <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li> <!-- Menu Home -->
+    <li><a href="anime-list.html" class="nav-link text-white active">Anime List</a></li> <!-- Menu Anime List dengan kelas active -->
+    <li><a href="about.html" class="nav-link text-white">About</a></li> <!-- Menu About -->
   </ul>
 </nav>
 
 <!-- Main Content -->
-<div id="content">
+<div id="content"> <!-- Bagian konten utama -->
 
   <!-- Section Anime List -->
-  <section id="anime-list" class="anime-list py-5">
-    <h2 class="text-center mb-4">·─ ·𖥸· ─·Anime List·─ ·𖥸· ─·</h2>
+  <section id="anime-list" class="anime-list py-5"> <!-- Bagian daftar anime dengan padding vertikal 5 -->
+    <h2 class="text-center mb-4">·─ ·𖥸· ─·Anime List·─ ·𖥸· ─·</h2> <!-- Judul anime list dengan format teks center dan margin bawah -->
+    <div class="row g-4"> <!-- Baris dengan jarak antar elemen grid sebesar 4 -->
 
-    <div class="row g-4">
       <!-- Card 1 -->
-      <div class="col-md-6">
-        <div class="card flex-row">
-          <img src="images/aot.jpg" class="card-img-left" alt="Attack on Titan">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Attack on Titan</h5>
+      <div class="col-md-6"> <!-- Kolom dengan lebar 6 pada perangkat medium dan lebih besar -->
+        <div class="card flex-row"> <!-- Kartu dengan layout fleksibel horizontal -->
+          <img src="images/aot.jpg" class="card-img-left" alt="Attack on Titan"> <!-- Gambar anime Attack on Titan di kiri -->
+          <div class="card-body d-flex flex-column"> <!-- Isi kartu dengan layout kolom fleksibel -->
+            <h5 class="card-title">Attack on Titan</h5> <!-- Judul anime -->
+            <!-- Deskripsi anime -->
             <p class="card-text">Di dunia yang dikuasai oleh raksasa pemakan manusia, umat manusia bertahan hidup di balik tembok besar. Eren Yeager bersumpah untuk memusnahkan semua Titan setelah menyaksikan kehancuran kota dan kematian ibunya. Namun, ia segera mengetahui bahwa dunia luar menyimpan rahasia yang jauh lebih gelap dari yang ia bayangkan.</p>
+            <!-- Tombol untuk membuka modal dengan daftar karakter -->
             <button class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modalAOT">Lihat Karakter</button>
           </div>
         </div>
@@ -101,27 +109,68 @@
 
 </div>
 
-<!-- Modal setiap anime -->
+<!-- Modal untuk setiap anime -->
 
 <!-- Modal AOT -->
 <div class="modal fade" id="modalAOT" tabindex="-1" aria-labelledby="modalAOTLabel" aria-hidden="true">
+  <!-- Modal utama dengan efek fade dan ID untuk referensi JS/HTML lainnya -->
+  
   <div class="modal-dialog">
+    <!-- Kontainer dialog modal -->
+    
     <div class="modal-content">
+      <!-- Konten utama modal -->
+
       <div class="modal-header">
+        <!-- Header modal -->
         <h5 class="modal-title" id="modalAOTLabel">Karakter Attack on Titan</h5>
+        <!-- Judul modal dengan ID untuk label ARIA -->
+        
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <!-- Tombol untuk menutup modal -->
       </div>
+
       <div class="modal-body">
+        <!-- Isi utama modal -->
+
         <ul class="list-group">
-          <li class="list-group-item character" data-img="images/eren.gif" data-bs-toggle="popover" data-bs-title="Eren Yeager" data-bs-content="Karakter utama, pejuang kebebasan.">Eren Yeager</li>
-          <li class="list-group-item character" data-img="images/mikasa.gif" data-bs-toggle="popover" data-bs-title="Mikasa Ackerman" data-bs-content="Sahabat setia Eren, ahli bertarung.">Mikasa Ackerman</li>
-          <li class="list-group-item character" data-img="images/levi.gif" data-bs-toggle="popover" data-bs-title="Levi Ackerman" data-bs-content="Kapten pasukan pengintai terbaik.">Levi Ackerman</li>
+          <!-- Daftar karakter dengan Bootstrap list-group -->
+
+          <li class="list-group-item character"
+              data-img="images/eren.gif"
+              data-bs-toggle="popover"
+              data-bs-title="Eren Yeager"
+              data-bs-content="Karakter utama, pejuang kebebasan.">
+            Eren Yeager
+          </li>
+          <!-- akan menampilkan popover saat di-hover atau klik, dan menyimpan gambar di atribut data-img -->
+
+          <li class="list-group-item character"
+              data-img="images/mikasa.gif"
+              data-bs-toggle="popover"
+              data-bs-title="Mikasa Ackerman"
+              data-bs-content="Sahabat setia Eren, ahli bertarung.">
+            Mikasa Ackerman
+          </li>
+
+          <li class="list-group-item character"
+              data-img="images/levi.gif"
+              data-bs-toggle="popover"
+              data-bs-title="Levi Ackerman"
+              data-bs-content="Kapten pasukan pengintai terbaik.">
+            Levi Ackerman
+          </li>
+
         </ul>
+
         <img id="imgAOT" class="character-img">
+        <!-- Gambar karakter yang akan berubah sesuai item list yang dipilih -->
       </div>
+
     </div>
   </div>
 </div>
+
 
 <!-- Modal Jujutsu Kaisen -->
 <div class="modal fade" id="modalJujutsuKaisen" tabindex="-1" aria-labelledby="modalJujutsuKaisenLabel" aria-hidden="true">
@@ -208,6 +257,6 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
  <!-- Custom Script -->
- <script src="script.js"></script>
+ <script src="script.js"></script> <!-- Memuat script kustom -->
 </body>
 </html>
